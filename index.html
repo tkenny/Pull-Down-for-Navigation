@@ -1,0 +1,123 @@
+<html>
+
+	<head>
+	
+		<title>Responsive Navigation</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+		
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script type="text/javascript" charset="utf-8">
+		
+		    function checkWidth () {
+		    
+		    	// Get the height of the div and set it in a variable called mabileNavHeight to access later	
+		    	var mobileNavHeight = $('#mobile').height();
+		
+		        // Check to see if the browser width is less than 480px wide
+		        if ($(window).width() < 481) {
+		    	    $('#site').css({
+		    	    	// Change the CSS top value of #site to whatever mobileNavHeight outputs
+		    	  		top: mobileNavHeight + 'px !important'
+		    		});
+		    		// Scroll the window the height of mobileNavHeight
+		    		$(window).scrollTop(mobileNavHeight);
+		        }
+		
+		    	// Check to see if the browser width is more than 480px wide
+		        else if ($(window).width() > 480) {
+		    	    $('#site').css({
+		    	    	// Make sure the top value of #site is 0 so we don't see the space for the mobile nav
+		    	  		top: 0 + 'px'
+		    		});
+		    		// Scroll to the absolute top of the page
+		    		$(window).scrollTop(0);
+		        }
+		    }
+		
+		    $(document).ready(function(){
+		        // Check the window size when page loads
+		        checkWidth();
+		    });
+		    
+		</script>
+		
+	</head>
+	
+	<body>
+
+    	<nav id="mobile">	
+    		<ul class="group">
+    			<li><a href="#">Home</a></li>
+    			<li><a href="#">Portfolio</a></li>
+    			<li><a href="#">Blog</a></li>
+    			<li><a href="#">About</a></li>
+    			<li><a href="#">Contact</a></li>
+    			<li><a href="#">Twitter</a></li>
+    			<li><a href="#">Dribbble</a></li>
+    			<li><a href="#">A Longer Navigation Item</a></li>
+    		</ul>
+    	</nav>
+    	
+    	<div id="site">
+    	
+    		<header>
+				<nav id="main">	
+					<ul>
+		    			<li><a href="#">Home</a></li>
+		    			<li><a href="#">Portfolio</a></li>
+		    			<li><a href="#">Blog</a></li>
+		    			<li><a href="#">About</a></li>
+		    			<li><a href="#">Contact</a></li>
+		    			<li><a href="#">Twitter</a></li>
+		    			<li><a href="#">Dribbble</a></li>
+		    			<li><a href="#">A Longer Navigation Item</a></li>
+					</ul>
+				</nav>
+			</header>
+			
+			<div class="container">
+			
+				<h1>Pull Down for Navigation Demo</h1>
+				
+				<p><a href="http://inspectelement.com/tutorials/pull-down-for-navigation/">See the tutorial here</a></p>
+				
+				<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+				
+				<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+							
+				<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+			    
+			    <style type="text/css">
+					.carbonad { margin-bottom: 20px; width: auto !important; padding: 0 15px 0 0 !important; border: none !important; background: #f7f7f7 !important; height: auto !important; position: relative; }
+					.carbonad-image { margin: 0 15px 0 0 !important; }
+					.carbonad-text, .carbonad-tag { text-align: left !important; float: none !important; width: auto !important; }
+					.carbonad-text { position: relative; top: 15px; padding-right: 15px !important; }
+					.carbonad-tag { position: absolute; bottom: 5px; right: 5px; width: 100px; }
+			    </style>
+			    
+			    <div id="carbonads-container"><div class="carbonad"><div id="carbon"></div><script type="text/javascript">var z = document.createElement("script"); z.type = "text/javascript"; z.async = true; z.src = "http://engine.carbonads.com/z/12113/carbon_2_1_0_HORIZ"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(z, s);</script></div></div>
+			    
+				<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+				
+				<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+							
+				<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+				<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+				
+				<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+							
+				<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+				<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+				
+				<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+							
+				<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+
+			</div>
+			
+		</div>
+			
+	</body>
+
+</html>
