@@ -1,73 +1,71 @@
 @import "reset.css";
 
 /* Float clearing goodness from Handcrafted CSS book by Dan Cederholm - http://handcraftedcss.com */
-.group:after 								{ content: "."; display: block; height: 0; clear: both; visibility: hidden; }
-* html .group 							{ height: 1%; }
+.group:after 						{ content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+* html .group 						{ height: 1%; }
 *:first-child+html .group 			{ min-height: 1px; }
 
-a 													{ color: #21BBE1; text-decoration: none; font-weight: bold; }
-a:hover 										{ color: #BE3F1C; }
-h1 												{ font-weight: bold; font-size: 1.25em; }
-h1, p 											{ margin-bottom: 15px; line-height: 20px; }
+a 									{ color: #21BBE1; text-decoration: none; font-weight: bold; }
+a:hover 							{ color: #BE3F1C; }
+h1 									{ font-weight: bold; font-size: 1.25em; }
+h1, p 								{ margin-bottom: 15px; line-height: 20px; }
 
-body 											{ font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 100%; }
+body 								{ font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 100%; }
 
-/* Mobile nav not visible by desktop browsers but only set to visiblity
-    hidden so jQuery can still detect the height of it ---------------------- */
-#mobile 										{ visibility: hidden; background: #21BBE1; position: fixed; z-index: 100; width: 100%; }
-#mobile ul 								{ margin: 0; }  
-#mobile ul li 								{ width: 50%; float: left; }  
-#mobile a 									{ 
-														color: #fff; padding: 15px 1.5em; display: block; border-bottom: 1px solid rgba(255, 255, 255, 0.25); 
-														text-decoration: none; text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25); white-space: nowrap; 
-														text-overflow: ellipsis; overflow: hidden; 
-													} 
-#mobile li:nth-of-type(2n-1) a 	{ border-right: 1px solid rgba(255, 255, 255, 0.25); } 
-/*------------------------------------------------------- */
+/* Mobile nav not visible by desktop browsers but only set to visiblity hidden so jQuery can still detect the height of it - Start */
+#mobile 							{ visibility: hidden; background: #21BBE1; position: fixed; z-index: 100; width: 100%; }
+#mobile ul 							{ margin: 0; }  
+#mobile ul li 						{ width: 50%; float: left; }  
+#mobile a 							{ 
+									color: #fff; padding: 15px 1.5em; display: block; border-bottom: 1px solid rgba(255, 255, 255, 0.25); 
+									text-decoration: none; text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25); white-space: nowrap; 
+									text-overflow: ellipsis; overflow: hidden; 
+									}
+#mobile li:nth-of-type(2n-1) a 		{ border-right: 1px solid rgba(255, 255, 255, 0.25); } 
+/* ~End */
 
+header 								{ margin-bottom: 20px; }
 
-header 										{ margin-bottom: 20px; }
-
-/* Main Navigation */
-nav#main 									{ border-bottom: 1px solid #ccc; padding-bottom: 10px; }
-nav#main li 								{ display: inline; margin-right: 5px; padding-right: 10px; border-right: 1px solid #ccc; line-height: 25px; }
+/* Main Navigation -*/
+nav#main 							{ border-bottom: 1px solid #ccc; padding-bottom: 10px; }
+nav#main li 						{ display: inline; margin-right: 5px; padding-right: 10px; border-right: 1px solid #ccc; line-height: 25px; }
 nav#main li:last-of-type 			{ border-right: none; }
 
-#site 											{ 
-													position: relative; z-index: 200; background: #fff; padding: 1em 1.5em; 
-													max-width: 50em; margin: 0 auto; 
-													-webkit-box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.4);
-													-moz-box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.4);
-													box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.4);
-													}
+#site 								{ 
+									position: relative; z-index: 200; background: #fff; padding: 1em 1.5em; 
+									max-width: 50em; margin: 0 auto; 
+									-webkit-box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.4);
+									-moz-box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.4);
+									box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.4);
+									}
 
-/*Media Query Goodness ------------------------------------------------------- */
+/*Media Query Goodness ---- */
 @media only screen and (min-width: 320px) and (max-width: 480px) 
-												{
-												/* Hide the main nav for mobile widths */
-												#main { display: none; }												
-												/* Make the mobile nav visible for mobile widths */
-												#mobile { visibility: visible; }
-												}
+									{
+										/* Hide the main nav for mobile widths */
+										#main { display: none; }												
+										/* Make the mobile nav visible for mobile widths */
+										#mobile { visibility: visible; }
+									}
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) 
-												{
-													/* Add the "Pull Down for Navigation" bar, all controlled via CSS including the text */
-													header:before 
-													{ 
-														width: 100%; display: block; content: "Pull Down for Navigation"; 
-														padding: 0.75em 1.5em; margin: -1em -1.5em 1em; 
-														color: #878787; text-shadow: 0 1px 1px rgba(255, 255, 255, 1); 
-														border-bottom: 1px solid #a6a6a6; background-origin: content-box; 
-														text-indent: 22px;
-														background-color: #e3e3e3;
-														background-image: url(images/pull.png), url(images/down.png);
-														background-position: right center, left center;
-														background-repeat: no-repeat;
-													}
-												}
-												
+									{
+										/* Add the "Pull Down for Navigation" bar, all controlled via CSS including the text */
+										header:before 
+										{ 
+											width: 100%; display: block; content: "Pull Down for Navigation"; 
+											padding: 0.75em 1.5em; margin: -1em -1.5em 1em; 
+											color: #878787; text-shadow: 0 1px 1px rgba(255, 255, 255, 1); 
+											border-bottom: 1px solid #a6a6a6; background-origin: content-box; 
+											text-indent: 22px;
+											background-color: #e3e3e3;
+											background-image: url(images/pull.png), url(images/down.png);
+											background-position: right center, left center;
+											background-repeat: no-repeat;
+										}
+									}
+											
 @media only screen and (min-width: 481px) 
-												{
-													#site { top: 0px !important; }
-												}
+									{
+										#site { top: 0px !important; }
+									}
