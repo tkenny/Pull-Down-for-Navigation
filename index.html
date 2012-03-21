@@ -21,7 +21,11 @@
 		    	  		top: mobileNavHeight + 'px !important'
 		    		});
 		    		// Scroll the window the height of mobileNavHeight
-		    		$(window).scrollTop(mobileNavHeight);
+		    		$('html, body').stop().animate({
+				        'scrollTop': $('#site').offset().top
+					}, 1300, 'swing', function () {
+						window.location.hash = '#site';
+				});
 		        }
 		
 		    	// Check to see if the browser width is more than 480px wide
@@ -31,7 +35,7 @@
 		    	  		top: 0 + 'px'
 		    		});
 		    		// Scroll to the absolute top of the page
-		    		$(window).scrollTop(0);
+		    		$(window).scrollTop(0); //no need for $.animate, on desktop browser it works just fine
 		        }
 		    }
 		
