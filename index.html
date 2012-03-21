@@ -20,10 +20,10 @@
 		    	    	// Change the CSS top value of #site to whatever mobileNavHeight outputs
 		    	  		top: mobileNavHeight + 'px !important'
 		    		});
-		    		// Scroll the window the height of mobileNavHeight
+		    		// Scroll the window the height of mobileNavHeight [animation set at 0 to hide the navigation immediately]
 		    		$('html, body').stop().animate({
 				        'scrollTop': $('#site').offset().top
-					}, 1300, 'swing', function () {
+					}, 0, 'swing', function () {
 						window.location.hash = '#site';
 				});
 		        }
